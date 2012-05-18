@@ -4,9 +4,7 @@ Install to:
 * [Sandbox as Unmanaged Package](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tE00000000Ytn)
 
 
-powered by 
-===========
-[SmartFactory](https://github.com/mbotos/SmartFactory-for-Force.com) and [SmartFactory 2](https://github.com/abhinavguptas/SmartFactory-for-Force.com)
+
 
 
 License (unless otherwise indicated): WTFPL
@@ -15,3 +13,5 @@ License (unless otherwise indicated): WTFPL
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE (WTFPL)
 
 Don't like something? Grab the source and hack away. I don't care! Well, actually, I do care. A lot! Make with the pull requests!
+
+*powered by* [SmartFactory](https://github.com/mbotos/SmartFactory-for-Force.com) and [SmartFactory 2](https://github.com/abhinavguptas/SmartFactory-for-Force.com)
