@@ -10,7 +10,7 @@ Install to:
 License (unless otherwise indicated): WTFPL
 --------------------------------------------
 
-DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE (WTFPL)
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE ([WTFPL](http://mspr0.de/))
 
 Don't like something? Grab the source and hack away. I don't care! Well, actually, I do care. A lot! Make with the pull requests!
 
