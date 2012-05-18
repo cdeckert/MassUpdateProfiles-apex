@@ -1,0 +1,43 @@
+<apex:page controller="ChangeUserProfileController">
+    <apex:form >
+        <apex:pageBlock title="Find Users">
+            <apex:PageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel for="searchTerm">Search Term:</apex:outputLabel>
+                    <apex:inputText value="{!searchTerm}" id="searchTerm"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel for="license">License:</apex:outputLabel>
+                    <apex:selectList size="1" value="{!selectedUserLicense}">
+                        <apex:selectOptions value="{!userLicenses}"></apex:selectOptions>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:PageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!actionStartSearchForUsers}" value="{!'search'}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:form >
+        <apex:pageblock rendered="{!isResult}">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="{!'Assign profile to selected users'}" action="{!actionChangeProfile}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Profile</apex:outputLabel>
+                    <apex:selectList value="{!selectedProfile}" size="1">
+                        <apex:selectOptions value="{!profiles}"></apex:selectOptions>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!userRecords}" var="user">
+                <apex:column >
+                    <apex:inputCheckbox value="{!user.isChecked}"/>
+                </apex:column>
+                <apex:column value="{!user.sfRecord.name}"/>
+                <apex:column value="{!user.sfRecord.Profile.name}" headerValue="ProfileName"/>
+            </apex:pageBlockTable>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>
